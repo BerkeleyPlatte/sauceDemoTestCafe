@@ -1,7 +1,7 @@
 import InventoryPage from '../pages/InventoryPage';
 import LoginPage from '../pages/LoginPage';
 
-fixture `Verify the InventoryPage page functionality and capabilities:`
+fixture `InventoryPage`
     .page("https://www.saucedemo.com/inventory.html")
     .beforeEach(async () => {
         await LoginPage.loginUser();
