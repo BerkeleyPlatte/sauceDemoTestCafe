@@ -1,4 +1,5 @@
 import { Selector, t } from 'testcafe';
+import InventoryPage from './InventoryPage';
 
 class Cart {
     constructor() {
@@ -21,6 +22,12 @@ class Cart {
         for (let i = 0; i < numberOfItems; i++) {
             await this.removeItem();
         }
+    }
+
+    async returnToInventory() {
+        await t
+            .click(this.continueShoppingButton)
+            .expect(InventoryPage.inventoryTitle.exists).ok();
     }
 }
 

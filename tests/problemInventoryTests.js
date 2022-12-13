@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 fixture `InventoryPage`
     .page("https://www.saucedemo.com/inventory.html")
     .beforeEach(async () => {
-        await LoginPage.loginUser('standard_user');
+        await LoginPage.loginUser('problem_user');
     });
 
 const pictureOjb = {

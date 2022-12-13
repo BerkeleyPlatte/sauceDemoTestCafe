@@ -25,10 +25,6 @@ class InventoryPage {
             .expect(this.itemNameList.nth(0).innerText).contains(keyword);
     }
 
-    async checkItemPicture() {
-            await console.log(this.itemPicture.nth(0).innerText);
-    }
-
     async logout() {
         await t
             .click(this.menuButton)
