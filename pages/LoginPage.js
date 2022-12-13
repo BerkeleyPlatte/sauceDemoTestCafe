@@ -1,4 +1,4 @@
-import {Selector, t } from 'testcafe';
+import { Selector, t } from 'testcafe';
 
 class LoginPage{
     constructor() {
@@ -8,10 +8,10 @@ class LoginPage{
         this.errorMessage = Selector("[data-test='error']");
     }
 
-    async loginUser(username="standard_user", password="secret_sauce") {
+    async loginUser(username) {
         await t
             .typeText(this.usernameInput, username)
-            .typeText(this.passwordInput, password)
+            .typeText(this.passwordInput, 'secret_sauce')
             .click(this.loginButton)
     }
 }

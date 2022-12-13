@@ -14,6 +14,19 @@ class InventoryPage {
         this.itemPriceList = Selector('.inventory_item_price');
         this.addToCartButtonList = Selector('div.pricebar button');
         this.cartCounter = 0;
+        this.productSortContainer = Selector('.product_sort_container');
+        this.itemPicture = Selector('.inventory_item_img');
+    }
+
+    async sortItems(sorter, keyword) {
+        await t
+            .click(this.productSortContainer)
+            .click(this.productSortContainer.find('option').withText(sorter))
+            .expect(this.itemNameList.nth(0).innerText).contains(keyword);
+    }
+
+    async checkItemPicture() {
+            await console.log(this.itemPicture.nth(0).innerText);
     }
 
     async logout() {
